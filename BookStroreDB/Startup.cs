@@ -34,8 +34,9 @@ namespace BookStroreDB
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "BookStroreDB");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Hoang Nam BookStoreDB");
             });
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
